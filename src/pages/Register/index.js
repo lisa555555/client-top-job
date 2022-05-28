@@ -1,5 +1,5 @@
-function Home() {
-    return <h2>Home page</h2>;
+function Register() {
+    return <h2>Register page</h2>;
 }
 
-export default Home;
+export default Register;
