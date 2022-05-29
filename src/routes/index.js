@@ -3,11 +3,11 @@ import Login from '~/pages/Login';
 import Register from '~/pages/Register';
 import Upload from '~/pages/Upload';
 
-import { HeaderOnly } from '~/components/Layout';
+import { HeaderOnly } from '~/components/Layouts';
 
 const publicRoutes = [
     { path: '/', component: Home },
-    { path: '/login', component: Login },
+    { path: '/login', component: Login, layout: null },
     { path: '/register', component: Register },
     { path: '/upload', component: Upload, layout: HeaderOnly },
 ];
