@@ -1,12 +1,30 @@
 import style from './Login.module.scss';
 import classNames from 'classnames/bind';
+import { useState } from 'react';
+import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare, faGoogle, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { type } from '@testing-library/user-event/dist/type';
 
 const ab = classNames.bind(style);
 
 function Login() {
+    const [userInput, setUserInput] = useState({});
+    console.log(userInput);
+    const onSubmitHandle = async (e) => {
+        try {
+            e.preventDefault();
+            console.log('ok');
+            const option = {
+                method: 'post',
+                url: '/api/v1/user/login/',
+                data: userInput,
+            };
+            const response = await axios(option);
+        } catch (error) {}
+    };
+
     return (
         <div className={ab('wrapper')}>
             <div className={ab('col')}>
@@ -22,7 +40,7 @@ function Login() {
                     </div>
                 </div>
                 <div className={ab('login')}>
-                    <form action="" method="POST" id="form-login">
+                    <form onSubmit={onSubmitHandle} id="form-login">
                         <div className={ab('form-group')}>
                             <label for="email" className={ab('text-label')}>
                                 Email
@@ -41,6 +59,7 @@ function Login() {
                                     name="email"
                                     class={ab('form-control')}
                                     placeholder="Nhập email của bạn"
+                                    onChange={(e) => setUserInput({ ...userInput, [e.target.name]: e.target.value })}
                                 />
                             </div>
                         </div>
@@ -59,6 +78,7 @@ function Login() {
                                     name="password"
                                     className={ab('form-control')}
                                     placeholder="Nhập password của bạn"
+                                    onChange={(e) => setUserInput({ ...userInput, [e.target.name]: e.target.value })}
                                 />
                             </div>
                         </div>
@@ -86,7 +106,7 @@ function Login() {
                     <div className={ab('content-between')}>
                         <div>
                             <span>Bạn chưa có tài khoản? </span>
-                            <a href="">Đăng ký ngay</a>
+                            <a href="http://localhost:3000/register">Đăng ký ngay</a>
                         </div>
                         <a href="">Quên mật khẩu</a>
                     </div>
@@ -95,6 +115,9 @@ function Login() {
                         <p className={ab('phone-support')}>Vui lòng gọi tới số 0853979020 (giờ hành chính).</p>
                     </div>
                 </div>
+            </div>
+            <div className={ab('carousel')}>
+                <img src="https://file1.hutech.edu.vn/file/editor/tuyensinh/nganh-cong-nghe-thong-tin-la-gi-ra-truong-lam-gi-hutech2.JPG" />
             </div>
         </div>
     );

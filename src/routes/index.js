@@ -8,7 +8,7 @@ import { HeaderOnly } from '~/components/Layouts';
 const publicRoutes = [
     { path: '/', component: Home },
     { path: '/login', component: Login, layout: null },
-    { path: '/register', component: Register },
+    { path: '/register', component: Register, layout: null },
     { path: '/upload', component: Upload, layout: HeaderOnly },
 ];
 
