@@ -177,3 +177,203 @@
 .support-text .phone-support {
     font-size: 13px;
 }
+
+@media only screen and (max-width: 46.1875em) {
+    .carousel {
+        display: none;
+    }
+
+    .carousel img {
+        width: 80%;
+    }
+
+    .wrapper {
+        margin: auto;
+        min-width: auto;
+        overflow: auto;
+    }
+
+    .wrapper .col {
+        padding: 100px 70px;
+        min-width: 100vh;
+        min-height: 100vh;
+    }
+
+    .header .title {
+        font-size: 25px;
+    }
+
+    .header .caption {
+        font-size: 18px;
+        width: 80%;
+    }
+
+    .form-group .text-label {
+        font-size: 15px;
+    }
+
+    .form-group .input-group {
+        height: 50px;
+        width: 70%;
+        border: 2px solid #eee;
+    }
+
+    .wrapper .input-group .form-control {
+        height: 45px;
+        width: 89%;
+        font-size: 14px;
+    }
+
+    .wrapper .input-group .input-group-text .icon-group {
+        width: 16px;
+        height: 18px;
+        padding-top: 8px;
+        color: #fe5621;
+    }
+
+    .form-group-1 .btn {
+        height: 45px;
+        width: 70%;
+        font-size: 16px;
+    }
+
+    .form-group-1 p {
+        padding-right: 30%;
+        font-size: 13px;
+    }
+
+    .content-between {
+        margin-top: 1.5rem;
+        width: 70%;
+    }
+
+    .content-between span {
+        font-size: 14px;
+    }
+
+    .content-between a {
+        font-size: 14px;
+    }
+
+    .content-between .forgot-password {
+        padding-top: 3px;
+    }
+
+    .support-text {
+        border-top: 2px solid #eee;
+        margin-top: 2rem;
+    }
+
+    .support-text .q-support {
+        padding-top: 6px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .support-text .phone-support {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .carousel {
+        display: none;
+    }
+
+    .wrapper {
+        margin: auto;
+        min-width: auto;
+        overflow: auto;
+    }
+
+    .wrapper .col {
+        padding: 100px 80px;
+        min-width: 100vh;
+        min-height: 100vh;
+    }
+
+    .header .title {
+        font-size: 55px;
+    }
+
+    .header .caption {
+        font-size: 32px;
+        width: 70%;
+    }
+
+    .form-group .text-label {
+        font-size: 28px;
+    }
+
+    .form-group .input-group {
+        height: 80px;
+        width: 75%;
+        border: 3px solid #eee;
+    }
+
+    .wrapper .input-group .form-control {
+        height: 75px;
+        width: 93%;
+        font-size: 24px;
+    }
+
+    .wrapper .input-group .input-group-text .icon-group {
+        width: 30px;
+        height: 30px;
+        padding-top: 15px;
+        color: #fe5621;
+    }
+
+    .form-group-1 .btn {
+        height: 80px;
+        width: 75%;
+        font-size: 30px;
+    }
+
+    .form-group-1 p {
+        padding-right: 36%;
+        font-size: 22px;
+    }
+
+    .content-between {
+        margin-top: 1.5rem;
+        width: 65%;
+    }
+
+    .content-between span {
+        font-size: 26px;
+    }
+
+    .content-between a {
+        font-size: 26px;
+    }
+
+    .text-agreed {
+        width: 75%;
+    }
+
+    .text-agreed .text-normal {
+        font-size: 26px;
+        width: 100%;
+    }
+
+    .text-agreed .text-normal .text-highlight {
+        font-size: 26px;
+        width: 100%;
+    }
+
+    .support-text {
+        border-top: 3px solid #eee;
+        margin-top: 2rem;
+    }
+
+    .support-text .q-support {
+        padding-top: 6px;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .support-text .phone-support {
+        font-size: 24px;
+    }
+}

@@ -9,6 +9,7 @@ const ab = classNames.bind(style);
 
 function Register() {
     const [userInput, setUserInput] = useState({});
+    const [ErrorMessage, seErrorMessage] = useState(null);
     console.log(userInput);
     const onSubmitHandle = async (e) => {
         try {
@@ -20,7 +21,9 @@ function Register() {
                 data: userInput,
             };
             const response = await axios(option);
-        } catch (error) {}
+        } catch (error) {
+            seErrorMessage(error.response.data.message);
+        }
     };
 
     return (
@@ -107,7 +110,7 @@ function Register() {
                                     </span>
                                 </div>
                                 <input
-                                    type="password2"
+                                    type="password"
                                     name="password2"
                                     className={ab('form-control')}
                                     placeholder="Nhập lại mật khẩu"

@@ -11,6 +11,7 @@ const ab = classNames.bind(style);
 
 function Login() {
     const [userInput, setUserInput] = useState({});
+    const [ErrorMessage, seErrorMessage] = useState(null);
     console.log(userInput);
     const onSubmitHandle = async (e) => {
         try {
@@ -22,7 +23,9 @@ function Login() {
                 data: userInput,
             };
             const response = await axios(option);
-        } catch (error) {}
+        } catch (error) {
+            seErrorMessage(error.response.data.message);
+        }
     };
 
     return (
@@ -91,15 +94,15 @@ function Login() {
                         <div className={ab('login-social-media')}>
                             <a href="https://www.facebook.com/" className={ab('btn-fb')}>
                                 <FontAwesomeIcon className={ab('brand-fb')} icon={faFacebookSquare}></FontAwesomeIcon>
-                                <span>Facebook</span>
+                                <span className={ab('brand')}>Facebook</span>
                             </a>
                             <a href="https://accounts.google.com/" className={ab('btn-gg')}>
                                 <FontAwesomeIcon className={ab('brand-gg')} icon={faGoogle}></FontAwesomeIcon>
-                                <span>Google</span>
+                                <span className={ab('brand')}>Google</span>
                             </a>
                             <a href="https://www.linkedin.com/login" className={ab('btn-ld')}>
                                 <FontAwesomeIcon className={ab('brand-ld')} icon={faLinkedin}></FontAwesomeIcon>
-                                <span>Linkedin</span>
+                                <span className={ab('brand')}>Linkedin</span>
                             </a>
                         </div>
                     </form>
@@ -108,7 +111,9 @@ function Login() {
                             <span>Bạn chưa có tài khoản? </span>
                             <a href="http://localhost:3000/register">Đăng ký ngay</a>
                         </div>
-                        <a href="">Quên mật khẩu</a>
+                        <a className={ab('forgot-password')} href="">
+                            Quên mật khẩu
+                        </a>
                     </div>
                     <div className={ab('support-text')}>
                         <p className={ab('q-support')}>Bạn gặp khó khăn khi tạo tài khoản? </p>
